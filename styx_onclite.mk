@@ -12,17 +12,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from onclite device
 $(call inherit-product, device/xiaomi/onclite/device.mk)
 
-# Inherit some common Pixys stuff.
-$(call inherit-product, vendor/pixys/config/common_full_phone.mk)
+# Inherit some common Styx stuff.
+$(call inherit-product, vendor/styx/config/common.mk)
 
-#Boot animation
+# Boot animation
 TARGET_BOOT_ANIMATION_RES := 720
 
-#Gapps
-TARGET_GAPPS_ARCH := arm64
-
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := pixys_onclite
+PRODUCT_NAME := styx_onclite
 PRODUCT_DEVICE := onclite
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 7
@@ -34,3 +31,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="redfin-user 11 RQ1A.210105.003 7005429 release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+STYX_BUILD_VARIANT := OFFICIAL
